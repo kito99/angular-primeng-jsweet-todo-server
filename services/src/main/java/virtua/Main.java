@@ -28,7 +28,7 @@ public class Main {
 
         // create a resource config that scans for JAX-RS resources and providers
         // in virtua package
-        final ResourceConfig resourceConfig = ResourceConfig.forApplicationClass(TodoApplication.class);
+        final ResourceConfig resourceConfig = new ResourceConfig().packages("virtua");
 
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
