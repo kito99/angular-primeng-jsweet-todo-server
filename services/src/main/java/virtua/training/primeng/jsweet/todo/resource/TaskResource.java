@@ -62,7 +62,7 @@ public class TaskResource {
     public Response getTask(@PathParam("id") String id) {
         Optional<Task> task = taskService.get(id);
         if (task.isPresent()) {
-            return Response.ok(task).build();
+            return Response.ok(task.get()).build();
         }
         return Response.status(Response.Status.NOT_FOUND).build();
     }
