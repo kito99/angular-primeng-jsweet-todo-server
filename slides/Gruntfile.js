@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
 		exec: {
 		  readme: 'asciidoctor "README.asc"',            
-		  session: 'asciidoctor -T asciidoctor-reveal.js/templates/slim "java-ee-mvc-and-polymer.asc"',
+		  session: 'asciidoctor -T asciidoctor-reveal.js/templates/slim "angular-primeng-jsweet-jaxrs.asc"',
             pdf: 'asciidoctor-pdf *.asc'		  
 		},
         'connect': {

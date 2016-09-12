@@ -1,12 +1,11 @@
-package virtua.training.polymer.mvc.todo.resource;
+package virtua.training.primeng.jsweet.todo.resource;
 
-import virtua.training.polymer.mvc.todo.model.Task;
-import virtua.training.polymer.mvc.todo.model.User;
-import virtua.training.polymer.mvc.todo.service.TaskService;
+import virtua.training.primeng.jsweet.todo.model.Task;
+import virtua.training.primeng.jsweet.todo.model.User;
+import virtua.training.primeng.jsweet.todo.service.TaskService;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.mvc.annotation.Controller;
-import javax.mvc.annotation.View;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -20,15 +19,20 @@ import java.util.logging.Logger;
  *
  * @author Kito D. Mann
  */
+@ApplicationScoped
 @Path("/tasks")
-public class TaskController {
-    private final static Logger logger = Logger.getLogger(TaskController.class.getName());
+public class TaskResource {
+    private final static Logger logger = Logger.getLogger(TaskResource.class.getName());
 
-    @Inject
+//    @Inject
     private User user;
 
     @Inject
     private TaskService taskService;
+
+    public TaskResource() {
+        System.out.println("created new TaskResource");
+    }
 
     @Path("{id}")
     @PUT
@@ -76,16 +80,5 @@ public class TaskController {
     public Response getTasks() {
         Task[] tasks = taskService.getTasks();
         return Response.ok(tasks).build();
-    }
-
-    /**
-     * Example of using a resource method in the same class with JAX-RS resource methods, and the @View annotation.
-     */
-    @Controller
-    @Path("listPage")
-    @GET
-    @View("redirect:../todo.xhtml#!/home/")
-    public void getTaskPage() {
-        // do some work
     }
 }

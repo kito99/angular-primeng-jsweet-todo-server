@@ -1,4 +1,4 @@
-package virtua.training.polymer.mvc.todo.controller;
+package virtua.training.polymer.mvc.todo.resource;
 
 import virtua.training.polymer.mvc.todo.model.User;
 import virtua.training.polymer.mvc.todo.service.UserService;

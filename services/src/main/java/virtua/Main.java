@@ -3,6 +3,7 @@ package virtua;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
+import virtua.training.primeng.jsweet.todo.TodoApplication;
 
 import java.io.IOException;
 import java.net.URI;
@@ -22,7 +23,7 @@ public class Main {
     public static HttpServer startServer() {
         // create a resource config that scans for JAX-RS resources and providers
         // in virtua package
-        final ResourceConfig rc = new ResourceConfig().packages("virtua");
+        final ResourceConfig rc = ResourceConfig.forApplicationClass(TodoApplication.class);
 
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
