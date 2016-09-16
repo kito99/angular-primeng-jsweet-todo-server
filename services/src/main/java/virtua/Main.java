@@ -4,7 +4,7 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.jboss.weld.environment.se.Weld;
-import virtua.training.primeng.jsweet.todo.TodoApplication;
+import virtua.training.primeng.jsweet.todo.filter.CorsFilter;
 
 import java.io.IOException;
 import java.net.URI;
@@ -15,7 +15,7 @@ import java.net.URI;
  */
 public class Main {
     // Base URI the Grizzly HTTP server will listen on
-    private static final URI BASE_URI = URI.create("http://localhost:8080/myapp/");
+    public static final URI BASE_URI = URI.create("http://localhost:8080/todo/");
 
     /**
      * Starts Grizzly HTTP server exposing JAX-RS resources defined in this application.

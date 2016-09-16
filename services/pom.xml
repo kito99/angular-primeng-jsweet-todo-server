@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>virtua</groupId>
-    <artifactId>angular-primeng-jsweet-todo-services</artifactId>
+    <artifactId>angular-def.primeng-jsweet-todo-services</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>angular-primeng-jsweet-todo-services</name>
+    <name>angular-def.primeng-jsweet-todo-services</name>
 
     <dependencyManagement>
         <dependencies>
@@ -39,12 +39,16 @@
         <dependency>
             <groupId>org.glassfish.jersey.ext.cdi</groupId>
             <artifactId>jersey-weld2-se</artifactId>
-            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.ext.cdi</groupId>
             <artifactId>jersey-cdi1x</artifactId>
-            <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.test-framework.providers</groupId>
+            <artifactId>jersey-test-framework-provider-bundle</artifactId>
+            <type>pom</type>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
