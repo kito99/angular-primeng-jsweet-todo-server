@@ -1,4 +1,4 @@
-package virtua.training.primeng.jsweet.todo.model;
+package virtua.primeng_jsweet_jaxrs_todo.model;
 
 /**
  * Represents a task.

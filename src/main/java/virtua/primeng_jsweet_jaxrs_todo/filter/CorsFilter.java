@@ -1,4 +1,4 @@
-package virtua.training.primeng.jsweet.todo.filter;
+package virtua.primeng_jsweet_jaxrs_todo.filter;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;

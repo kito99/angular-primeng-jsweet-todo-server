@@ -1,8 +1,7 @@
-package virtua.training.primeng.jsweet.todo.resource;
+package virtua.primeng_jsweet_jaxrs_todo.resource;
 
-import virtua.training.primeng.jsweet.todo.model.Task;
-import virtua.training.primeng.jsweet.todo.model.User;
-import virtua.training.primeng.jsweet.todo.service.TaskService;
+import virtua.primeng_jsweet_jaxrs_todo.model.Task;
+import virtua.primeng_jsweet_jaxrs_todo.service.TaskService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -19,20 +18,14 @@ import java.util.logging.Logger;
  *
  * @author Kito D. Mann
  */
+// tag::jaxrs-simple[]
 @ApplicationScoped
 @Path("/tasks")
 public class TaskResource {
     private final static Logger logger = Logger.getLogger(TaskResource.class.getName());
 
-//    @Inject
-    private User user;
-
     @Inject
     private TaskService taskService;
-
-    public TaskResource() {
-        System.out.println("created new TaskResource");
-    }
 
     @Path("{id}")
     @PUT
@@ -66,6 +59,8 @@ public class TaskResource {
         }
         return Response.status(Response.Status.NOT_FOUND).build();
     }
+
+// end::jaxrs-simple[]
 
     @Path("{id}")
     @DELETE

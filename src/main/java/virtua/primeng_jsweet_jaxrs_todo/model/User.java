@@ -1,4 +1,4 @@
-package virtua.training.primeng.jsweet.todo.model;
+package virtua.primeng_jsweet_jaxrs_todo.model;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;

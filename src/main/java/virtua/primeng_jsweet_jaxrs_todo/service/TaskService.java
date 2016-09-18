@@ -1,6 +1,6 @@
-package virtua.training.primeng.jsweet.todo.service;
+package virtua.primeng_jsweet_jaxrs_todo.service;
 
-import virtua.training.primeng.jsweet.todo.model.Task;
+import virtua.primeng_jsweet_jaxrs_todo.model.Task;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
