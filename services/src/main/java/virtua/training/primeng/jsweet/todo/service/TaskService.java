@@ -32,8 +32,9 @@ public class TaskService {
 
     @PostConstruct
     public void init() {
-        add(new Task(null, userService.getSystemUser().getUserId(), "Read Java EE MVC 1.0 Spec", true));
-        add(new Task(null, userService.getSystemUser().getUserId(), "Read Polymer docs", false));
+        add(new Task(null, userService.getSystemUser().getUserId(), "Read Angular2 docs", true));
+        add(new Task(null, userService.getSystemUser().getUserId(), "Read JSweet docs", false));
+        add(new Task(null, userService.getSystemUser().getUserId(), "Read Jersey docs", false));
     }
 
     public Task[] getTasks() {
